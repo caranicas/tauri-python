@@ -1,3 +1,4 @@
+import React from "react";
 import { ReactLocation, Router } from "@tanstack/react-location";
 
 import HomePage from "./pages/homePage";
