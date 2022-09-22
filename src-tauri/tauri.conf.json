@@ -11,7 +11,17 @@
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "all": true,
+      "shell": {
+        "sidecar": true,
+        "scope": [
+          {
+            "name": "src-py/dist/image",
+            "args": true,
+            "sidecar": true
+          }
+        ]
+      }
     },
     "bundle": {
       "active": true,
@@ -20,7 +30,9 @@
       "deb": {
         "depends": []
       },
-      "externalBin": [],
+      "externalBin": [
+        "src-py/dist/image"
+      ],
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",

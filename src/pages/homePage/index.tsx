@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import reactLogo from "../../assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
+import { Command } from "@tauri-apps/api/shell?client";
 
 import { Link } from "@tanstack/react-location";
 function HomePage() {
@@ -10,6 +11,15 @@ function HomePage() {
   async function greet() {
     // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
     setGreetMsg(await invoke("greet", { name }));
+  }
+
+  async function hellowWorld() {
+    console.log('log hello world');
+    const command = Command.sidecar("src-py/dist/image");
+    console.log('command', command);
+    const output = await command.execute();
+
+    console.log('output', output);
   }
 
   return (
@@ -40,7 +50,7 @@ function HomePage() {
             onChange={(e) => setName(e.currentTarget.value)}
             placeholder="Enter a name..."
           />
-          <button type="button" onClick={() => greet()}>
+          <button type="button" onClick={() => hellowWorld()}>
             Greet
           </button>
         </div>
