@@ -15,7 +15,7 @@ function HomePage() {
 
   async function hellowWorld() {
     console.log('log hello world');
-    const command = Command.sidecar("src-py/dist/image");
+    const command = Command.sidecar("../src-py/dist/image");
     console.log('command', command);
     const output = await command.execute();
 

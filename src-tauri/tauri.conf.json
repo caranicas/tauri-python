@@ -16,7 +16,7 @@
         "sidecar": true,
         "scope": [
           {
-            "name": "src-py/dist/image",
+            "name": "../src-py/dist/image",
             "args": true,
             "sidecar": true
           }
@@ -31,7 +31,7 @@
         "depends": []
       },
       "externalBin": [
-        "src-py/dist/image"
+        "../src-py/dist/image"
       ],
       "icon": [
         "icons/32x32.png",
