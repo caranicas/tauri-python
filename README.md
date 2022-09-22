@@ -1,4 +1,4 @@
-# Tauri + React + Typescript + Python side care
+# Tauri + React + Typescript + Python sidecar
 
 This template should help get you started developing with Tauri, React and Typescript in Vite.
 
